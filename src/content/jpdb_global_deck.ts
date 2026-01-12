@@ -28,11 +28,11 @@ const getInitialReviewCounts = () => {
 let shouldShow = false;
 const [initial_reviews_in_page_load_count, initial_total_review_count] = getInitialReviewCounts();
 
-const showing_cards = window.location.href
-  .split('&')
-  .filter(part => part.startsWith('show_only'))[0]
-  .replace('show_only=', '')
-  .split(',');
+// const showing_cards = window.location.href
+//   .split('&')
+//   .filter(part => part.startsWith('show_only'))[0]
+//   .replace('show_only=', '')
+//   .split(',');
 
 const toggleUnimportantElements = (forceHide = false) => {
   const should_hide = forceHide || shouldShow;
