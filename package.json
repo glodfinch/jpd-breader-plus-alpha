@@ -3,10 +3,10 @@
   "version": "1.6.6",
   "scripts": {
     "preinstall": "git config core.hooksPath ./scripts/git_hooks",
-    "format": "ts-node --esm scripts/format.ts",
-    "check": "ts-node --esm scripts/check.ts",
-    "build": "ts-node --esm scripts/build.ts",
-    "watch": "ts-node --esm scripts/watch.ts",
+    "format": "node --loader ts-node/esm scripts/format.ts",
+    "check": "node --loader ts-node/esm scripts/check.ts",
+    "build": "node --loader ts-node/esm scripts/build.ts",
+    "watch": "node --loader ts-node/esm scripts/watch.ts",
     "prepare": "husky install"
   },
   "type": "module",
