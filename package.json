@@ -6,8 +6,7 @@
     "format": "tsx scripts/format.ts",
     "check": "tsx scripts/check.ts",
     "build": "tsx scripts/build.ts",
-    "watch": "tsx scripts/watch.ts",
-    "prepare": "husky install"
+    "watch": "tsx scripts/watch.ts"
   },
   "type": "module",
   "devDependencies": {
@@ -20,7 +19,6 @@
     "archiver": "^7.0.1",
     "chokidar": "^5.0.0",
     "eslint": "^9.39.2",
-    "husky": "^9.1.7",
     "prettier": "^3.7.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
