@@ -250,7 +250,7 @@ const messageHandlers: {
     for (const [seq, text] of request.texts) {
       enqueueParse(seq, text)
         .then(tokens => post(port, { type: 'success', seq: seq, result: tokens }))
-        .catch(error => post(port, { type: 'error', seq: seq, error: serializeError(error) }));
+        .catch(error => post(port, { type: 'error', seq: seq, error: serializeError(error as Error) }));
     }
     startParse();
   },
@@ -259,7 +259,7 @@ const messageHandlers: {
     for (const [seq, text] of request.texts) {
       enqueueJpdbPageParse(seq, text)
         .then(card => post(port, { type: 'success', seq: seq, result: card }))
-        .catch(error => post(port, { type: 'error', seq: seq, error: serializeError(error) }));
+        .catch(error => post(port, { type: 'error', seq: seq, error: serializeError(error as Error) }));
     }
     startJpdbPageParse();
   },

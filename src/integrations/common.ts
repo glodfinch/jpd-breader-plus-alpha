@@ -200,7 +200,7 @@ export function parseParagraphs(paragraphs: Paragraph[]): [ParseBatch[], Promise
       })
       .catch(error => {
         if (!(error instanceof Canceled)) {
-          showError(error);
+          showError(error instanceof Error ? error : new Error(String(error)));
         }
         throw error;
       }),
@@ -218,7 +218,7 @@ export function parseJpdbVocabulary(vidSidPairs: VidSidPair[]): [ParseVidSidBatc
       })
       .catch(error => {
         if (!(error instanceof Canceled)) {
-          showError(error);
+          showError(error instanceof Error ? error : new Error(String(error)));
         }
         throw error;
       }),
