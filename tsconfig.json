@@ -3,6 +3,7 @@
   "compilerOptions": {
     "rootDir": "src",
     "typeRoots": ["dev_types", "./node_modules/@types"],
+    "types": [],
     "outDir": "build",
     "target": "ES2022",
     "module": "Node16",
@@ -14,7 +15,8 @@
     "strictNullChecks": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "skipLibCheck": true
   },
   "ts-node": {
     "esm": true,

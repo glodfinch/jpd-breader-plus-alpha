@@ -28,7 +28,6 @@ async function apiCaller() {
     // Get first call from queue
 
     // Safety: We know this can't be undefined, because we checked that the length > 0
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const call = pendingAPICalls.shift()!;
 
     try {
@@ -298,7 +297,6 @@ const messageHandlers: {
     }
 
     // Safety: This is safe, because we early-errored for this condition
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     await addToDeck(request.vid, request.sid, config.miningDeckId!);
 
     if (request.sentence || request.translation) {
@@ -307,7 +305,6 @@ const messageHandlers: {
 
     if (request.forq) {
       // Safety: This is safe, because we early-errored for this condition
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       await addToDeck(request.vid, request.sid, config.forqDeckId!);
     }
 
